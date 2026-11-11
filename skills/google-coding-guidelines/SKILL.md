@@ -1,9 +1,9 @@
 ---
-name: code-style
+name: google-coding-guidelines
 description: Language-agnostic code style rules condensed from the Google C++ Style Guide. Use when writing, reviewing, or refactoring code in any language, and when the user asks about naming, comments, function design, scope, ownership, error handling, or formatting conventions.
 ---
 
-# Code Style
+# Google Coding Guidelines
 
 These rules make code easy to read and maintain in any language. They come from the Google C++ Style Guide, with the C++ syntax removed and the principles kept.
 

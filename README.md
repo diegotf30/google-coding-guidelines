@@ -1,19 +1,19 @@
-# code-style-skill
+# google-coding-guidelines
 
 A language-agnostic code style skill for Claude and other agents. It condenses the [Google C++ Style Guide](https://google.github.io/styleguide/cppguide.html) into rules that apply to any language: naming, comments, scope, functions, ownership, errors, and formatting.
 
-The skill is one file: [skills/code-style/SKILL.md](skills/code-style/SKILL.md).
+The skill is one file: [skills/google-coding-guidelines/SKILL.md](skills/google-coding-guidelines/SKILL.md).
 
 ## Install
 
 In Claude Code, add this repository as a plugin marketplace, then install the plugin:
 
 ```
-/plugin marketplace add diegotf30/code-style-skill
-/plugin install code-style@code-style-skill
+/plugin marketplace add diegotf30/google-coding-guidelines
+/plugin install google-coding-guidelines@google-coding-guidelines
 ```
 
-To install it by hand, copy `skills/code-style` into `~/.claude/skills/` (all projects) or `.claude/skills/` (one project).
+To install it by hand, copy `skills/google-coding-guidelines` into `~/.claude/skills/` (all projects) or `.claude/skills/` (one project).
 
 For other agents, paste the body of `SKILL.md` into the system prompt or the project's agent instructions file (`AGENTS.md`, `CLAUDE.md`).
 

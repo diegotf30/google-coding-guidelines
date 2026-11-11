@@ -1,9 +1,10 @@
 {
-  "name": "code-style-skill",
+  "name": "google-coding-guidelines",
   "owner": { "name": "diegotf30" },
+  "description": "Language-agnostic coding guidelines condensed from the Google C++ Style Guide.",
   "plugins": [
     {
-      "name": "code-style",
+      "name": "google-coding-guidelines",
       "source": "./",
       "description": "Language-agnostic code style rules condensed from the Google C++ Style Guide."
     }
