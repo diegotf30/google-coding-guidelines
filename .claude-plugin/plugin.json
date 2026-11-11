@@ -1,0 +1,6 @@
+{
+  "name": "code-style",
+  "version": "1.0.0",
+  "description": "Language-agnostic code style rules condensed from the Google C++ Style Guide.",
+  "license": "CC-BY-3.0"
+}

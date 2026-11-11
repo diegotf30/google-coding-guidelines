@@ -1,0 +1,9 @@
+This work is licensed under the Creative Commons Attribution 3.0 Unported
+License (CC BY 3.0). The full license text is at:
+https://creativecommons.org/licenses/by/3.0/legalcode
+
+This work is an adaptation of the Google C++ Style Guide
+(https://google.github.io/styleguide/cppguide.html), copyright Google LLC,
+also licensed under CC BY 3.0. Changes: the rules were condensed, rewritten
+in a language-agnostic form, and C++-only rules were removed. This adaptation
+is not endorsed by Google.

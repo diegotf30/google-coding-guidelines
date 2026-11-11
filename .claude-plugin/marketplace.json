@@ -1,0 +1,11 @@
+{
+  "name": "code-style-skill",
+  "owner": { "name": "diegotf30" },
+  "plugins": [
+    {
+      "name": "code-style",
+      "source": "./",
+      "description": "Language-agnostic code style rules condensed from the Google C++ Style Guide."
+    }
+  ]
+}
