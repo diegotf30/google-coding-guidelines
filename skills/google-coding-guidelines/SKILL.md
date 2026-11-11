@@ -9,13 +9,13 @@ These rules make code easy to read and maintain in any language. They come from 
 
 ## How to apply
 
-When you write or refactor code, follow these rules without comment. When you review code, cite the section name for each finding. Do not reformat or rename code that the task does not touch.
+When you write or refactor code, follow these rules without comment. When you review code, cite the section name for each finding, and also report any bug you notice. In a review, suggest renames and fixes, but do not apply them to code outside the task.
 
 ## Priorities
 
 If two rules conflict, the earlier rule wins.
 
-1. Match the existing code. Local consistency beats every rule below.
+1. Match the existing code. Local consistency beats every rule below. For an isolated snippet with no surrounding code, skip to rule 4.
 2. Write for the reader, not the writer. People read code far more often than they write it.
 3. Avoid surprise. Use the obvious construct, not the clever one.
 4. Follow the language's community conventions (PEP 8, Effective Go, the Rust API Guidelines) when the codebase has none.
@@ -24,7 +24,7 @@ If two rules conflict, the earlier rule wins.
 ## Scope and state
 
 - Declare each variable in the narrowest scope, close to its first use, and initialize it in the declaration.
-- Avoid mutable global state. Global constants are fine. Globals with complex setup or teardown cause order-of-initialization bugs.
+- Avoid mutable global state, including mutable static class fields. Global constants are fine. Globals with complex setup or teardown cause order-of-initialization bugs.
 - Keep file-internal helpers private to the file or module.
 - Do not add names to shared or standard-library namespaces, and do not monkey-patch them.
 - Do not use wildcard imports such as `import *` or `using namespace`.
@@ -64,7 +64,8 @@ If two rules conflict, the earlier rule wins.
 
 ## Types of values
 
-- Use explicit, checked conversions. Avoid unchecked casts.
+- Use explicit, checked conversions. Avoid unchecked casts and escape-hatch types such as `any`.
+- Add type annotations where the language supports them and the codebase uses them.
 - Use a type with explicit width when the size of a number matters.
 - Do not use an unsigned type only to say "never negative". Make sure that the value is valid with a check instead.
 - Use the language's null value (`nullptr`, `None`, `nil`), not `0`.
@@ -82,6 +83,7 @@ If two rules conflict, the earlier rule wins.
 - Use type inference only when the type is obvious or unimportant to the reader. Write the type out otherwise.
 - If a closure can outlive its scope, capture variables explicitly.
 - A public type alias is part of the API. Document it, and do not add one only for convenience.
+- Delete unused variables, parameters, imports, and dead code.
 - Avoid nonstandard language extensions.
 - Prefer the standard library and the dependencies already in use. Add a new dependency only when it pays for its license and maintenance cost.
 
@@ -123,7 +125,7 @@ If the language has a standard formatter, use it and skip this section. Otherwis
 - Remove trailing whitespace. It causes noise in diffs.
 - Use blank lines sparingly, to separate logical chunks.
 - Wrap a long call after the open parenthesis or with a four-space continuation indent. Use as few lines as you can.
-- Put braces around every control-flow body that is longer than one line, and around both branches of an if-else.
+- In languages with braces, put braces around every control-flow body that is longer than one line, and around both branches of an if-else.
 - Make an empty loop body explicit (`{}`, `pass`, `continue`), never a bare `;`.
 - When you wrap a boolean expression, put the operator at the end of the line, and do it the same way each time.
 - Do not put parentheses around a returned value.
