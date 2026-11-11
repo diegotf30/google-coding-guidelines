@@ -1,6 +1,6 @@
 {
   "name": "google-coding-guidelines",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Language-agnostic code style rules condensed from the Google C++ Style Guide.",
   "author": { "name": "diegotf30" },
   "repository": "https://github.com/diegotf30/google-coding-guidelines",

@@ -1,6 +1,6 @@
 ---
 name: google-coding-guidelines
-description: Language-agnostic code style rules condensed from the Google C++ Style Guide. Use when writing, reviewing, or refactoring code in any language, and when the user asks about naming, comments, function design, scope, ownership, error handling, or formatting conventions.
+description: Code style rules for any language (Python, JavaScript, TypeScript, Go, Java, Rust, C#, C++), condensed from the Google C++ Style Guide. Use this skill whenever you review code for style or quality, write a new function, class, or module, or refactor code. Also use it when the user asks about naming, comments, imports, function size, globals, inheritance, ownership, error handling, or formatting, or says "code style", "style review", "clean up this code", "is this idiomatic", or "Google style".
 ---
 
 # Google Coding Guidelines
